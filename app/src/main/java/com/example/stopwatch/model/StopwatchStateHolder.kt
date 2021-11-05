@@ -1,4 +1,6 @@
-package com.example.stopwatch
+package com.example.stopwatch.model
+
+import com.example.stopwatch.utils.TimestampMillisecondsFormatter
 
 class StopwatchStateHolder(
     private val stopwatchStateCalculator: StopwatchStateCalculator,
@@ -10,7 +12,8 @@ class StopwatchStateHolder(
 
     fun start() { currentState = stopwatchStateCalculator.calculateRunningState(currentState) }
     fun pause() { currentState = stopwatchStateCalculator.calculatePausedState(currentState) }
-    fun stop() { currentState = StopwatchState.Paused(0) }
+    fun stop() { currentState = StopwatchState.Paused(0)
+    }
 
     fun getStringTimeRepresentation(): String {
         val elapsedTime = when(val currentState = currentState) {

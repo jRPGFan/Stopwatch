@@ -1,4 +1,4 @@
-package com.example.stopwatch
+package com.example.stopwatch.model
 
 class ElapsedTimeCalculator(private val timestampProvider: TimestampProvider) {
     fun calculate(state: StopwatchState.Running): Long {

@@ -1,4 +1,4 @@
-package com.example.stopwatch
+package com.example.stopwatch.utils
 
 class TimestampMillisecondsFormatter {
     fun formatTime(timestamp: Long): String {
@@ -15,8 +15,4 @@ class TimestampMillisecondsFormatter {
     }
 
     private fun Long.pad(desiredLength: Int) = this.toString().padStart(desiredLength, '0')
-
-    companion object {
-        const val DEFAULT_TIME = "00:00:000"
-    }
 }

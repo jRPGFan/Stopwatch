@@ -1,4 +1,4 @@
-package com.example.stopwatch
+package com.example.stopwatch.model
 
 class StopwatchStateCalculator(
     private val timestampProvider: TimestampProvider,

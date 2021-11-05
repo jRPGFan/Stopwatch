@@ -1,5 +1,7 @@
-package com.example.stopwatch
+package com.example.stopwatch.viewmodel
 
+import androidx.lifecycle.ViewModel
+import com.example.stopwatch.model.StopwatchStateHolder
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -7,7 +9,7 @@ import kotlinx.coroutines.flow.StateFlow
 class StopwatchListOrchestrator(
     private val stopwatchStateHolder: StopwatchStateHolder,
     private val scope: CoroutineScope
-) {
+) : ViewModel() {
     private var job: Job? = null
     private val mutableTicker = MutableStateFlow("")
     val ticker: StateFlow<String> = mutableTicker
